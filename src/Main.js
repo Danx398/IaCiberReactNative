@@ -1,8 +1,11 @@
 import React from "react";
 import { View,Text } from "react-native";
+
 export function Main (){
-    <View>
-        <Text>Aplicacion para el escaneo de Documentos</Text>
-    </View>
+    return (
+        <View>
+            <Text>Hola mundo</Text>
+        </View>
+    );
 }
 // export default Main

@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button, Alert } from 'react-native';
+import { Main } from './src/Main';
+import { Prueba } from './src/Prueba';
 
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
         accessibilityLabel="Learn more about this purple button"
         color='red'
       />
+      <Main/>
+      <Prueba/>
     </View>
   );
 }
