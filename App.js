@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, Button, Alert } from 'react-native';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.baseText}>Aplicación Para Encontrar malwares</Text>
+      <Button
+       onPress={() => Alert.alert('Escaneando Información...')}
+        title="Escaner Archivos"
+        accessibilityLabel="Learn more about this purple button"
+        color='red'
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  baseText: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom:20,
+  },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    marginTop:350,
     alignItems: 'center',
-    justifyContent: 'center',
+    /*  flex: 1,
+     justifyContent: 'center', */
   },
 });
