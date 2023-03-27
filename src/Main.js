@@ -1,31 +1,47 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Alert } from "react-native";
 
 export function Main() {
     return (
-        <View>
+        <View style={styles.containertext}>
             <Text style={styles.baseText}>Aplicación Para Encontrar malwares</Text>
-            <Button
+            <TouchableOpacity
+                style={styles.boton}
                 onPress={() => Alert.alert('Escaneando Información...')}
-                title="Escaner Archivos"
-                accessibilityLabel="Learn more about this purple button"
-                color='red'
-            />
+            >
+                <View style={styles.containertext}>
+                    <Text style={styles.textoCentrado}>
+                        Escanear Archivos
+                    </Text>
+                </View>
+            </TouchableOpacity>
         </View>
     );
 }
+
 const styles = StyleSheet.create({
     baseText: {
-      fontWeight: 'bold',
-      fontSize: 20,
-      marginBottom:20,
+        fontWeight: 'bold',
+        fontSize: 20,
+        marginBottom: 20,
     },
-    container: {
-      marginTop:350,
-      alignItems: 'center',
-      /*  flex: 1,
-       justifyContent: 'center', */
+    containertext: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-  });
-  
+    boton: {
+        // backgroundColor: '#B4E4FF',
+        backgroundColor: '#3E54AC',
+        width: 250,
+        height: 250,
+        borderRadius: 125
+    },
+    textoCentrado: {
+        textAlign: 'center',
+        color: 'white',
+        fontSize: 40
+    }
+});
+
 // export default Main
