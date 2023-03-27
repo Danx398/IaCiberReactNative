@@ -1,20 +1,14 @@
 import React from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 import { Main } from './src/Main';
+import { Prueba } from './src/Prueba';
 
 
 export default function App() {
   return (
-    <View style={estilo.container}>
-      <Main />
+    <View style={styles.container}>
+      <Main/>
+      <Prueba/>
     </View>
   );
 }
-
-const estilo = new StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-});
